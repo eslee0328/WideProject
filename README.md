@@ -1,1 +1,2 @@
-# WideProject
+# Widetns Personal Project
+
