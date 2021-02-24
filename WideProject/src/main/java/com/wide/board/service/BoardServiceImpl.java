@@ -14,7 +14,7 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAOImpl boardDAO;
 	
-	public void insertBoard(BoardDTO vo) {
+	public void insertBoard(BoardDTO vo) throws Exception {
 		boardDAO.insertBoard(vo);
 	}
 	
@@ -34,7 +34,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 	
 	// 글 목록
-	public List<BoardDTO> getBoardList(BoardDTO vo){
+	public List<BoardDTO> getBoardList(BoardDTO vo) throws Exception {
 		return boardDAO.getBoardList(vo);
 	}
 	

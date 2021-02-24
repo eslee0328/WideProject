@@ -7,7 +7,7 @@ import com.wide.board.dto.BoardDTO;
 public interface BoardDAO {
 
 	// 글 작성
-	public void insertBoard(BoardDTO vo);
+	public void insertBoard(BoardDTO vo) throws Exception;
 	
 	// 글 수정
 	public void updateBoard(BoardDTO vo);
@@ -19,7 +19,7 @@ public interface BoardDAO {
 	public BoardDTO getBoard(BoardDTO vo);
 	
 	// 글 목록 조회
-	public List<BoardDTO> getBoardList(BoardDTO vo);
+	public List<BoardDTO> getBoardList(BoardDTO vo) throws Exception;
 	
 	// 글 조회수 증가
 	public void plusCnt(BoardDTO vo);

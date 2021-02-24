@@ -25,14 +25,14 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/saveBoard.do")
-	public String saveBoard(BoardDTO vo) {
+	public String saveBoard(BoardDTO vo) throws Exception {
 		boardService.insertBoard(vo);
 		return "redirect:/getBoardList.do"; 
 	}
 	
 	@RequestMapping("/getBoardList.do")
-	public void getBoardList(BoardDTO vo, Model m) {
-		List<BoardDTO> result = boardService.getBoardList(vo);
+	public void getBoardList(BoardDTO vo, Model m) throws Exception {
+		List<BoardDTO> result = boardService.getBoardList(vo) ;
 		m.addAttribute("boardList",result);
 	}
 

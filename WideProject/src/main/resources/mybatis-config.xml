@@ -4,6 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+ <settings>
+        <!-- null값이 파라미터로 전달될 때 오류나지 않게 NULL 처리 -->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
 	<!-- Alias 설정 -->
 	<typeAliases>
 		<typeAlias alias="board" type="com.wide.board.dto.BoardDTO" />		

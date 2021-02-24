@@ -14,7 +14,7 @@ public class BoardDAOImpl implements BoardDAO{
 	@Autowired  
 	private SqlSessionTemplate mybatis;
 
-	public void insertBoard(BoardDTO vo) {
+	public void insertBoard(BoardDTO vo) throws Exception {
 		System.out.println("===> insertBoard() 호출");
 		mybatis.insert("BoardDAO.insertBoard", vo);
 	}
@@ -36,7 +36,7 @@ public class BoardDAOImpl implements BoardDAO{
 		return mybatis.selectOne("BoardDAO.getBoard", vo);
 	}
 
-	public List<BoardDTO> getBoardList(BoardDTO vo) {
+	public List<BoardDTO> getBoardList(BoardDTO vo) throws Exception {
 		System.out.println("===> getBoardList() 호출");
 		return mybatis.selectList("BoardDAO.getBoardList", vo);
 	}
