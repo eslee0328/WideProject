@@ -2,6 +2,8 @@ package com.wide.board.dto;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardDTO {
 	/*
 	CREATE TABLE board(
@@ -20,6 +22,7 @@ public class BoardDTO {
 	private String content;
 	private Date regdate;
 	private int cnt;
+	private MultipartFile uploadFile;
 	
 	public int getSeq() {
 		return seq;
@@ -56,6 +59,14 @@ public class BoardDTO {
 	}
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
+	}
+	
+	
+	public MultipartFile getUploadFile() {
+		return uploadFile;
+	}
+	public void setUploadFile(MultipartFile uploadFile) {
+		this.uploadFile = uploadFile;
 	}
 	
 	@Override

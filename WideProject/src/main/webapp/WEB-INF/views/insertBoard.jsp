@@ -9,7 +9,7 @@
 <body>
 	<h1>글 등록</h1>		
 		<hr>
-		<form action="saveBoard.do" method="post"> 
+		<form action="saveBoard.do" method="post" enctype="multipart/form-data"> 
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
 					<td align="center" bgcolor="orange" width="100">제목</td>
@@ -22,6 +22,10 @@
 				<tr>
 					<td align="center" bgcolor="orange">내용</td>
 					<td align="left"><textarea cols="40" rows="10" name='content'></textarea></td>
+				</tr>
+				<tr>
+				     <td align="center" bgcolor="orange" width="100">첨부파일</td><td align="left">
+				     <input type="file" name=uploadFile"/></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"	value=" 새글 등록 " /></td>

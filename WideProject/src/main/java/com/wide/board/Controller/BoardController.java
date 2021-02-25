@@ -1,6 +1,7 @@
 package com.wide.board.Controller;
 
 
+import java.io.File;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.wide.board.dto.BoardDTO;
 import com.wide.board.service.BoardService;
@@ -26,6 +28,13 @@ public class BoardController {
 	
 	@RequestMapping("/saveBoard.do")
 	public String saveBoard(BoardDTO vo) throws Exception {
+	    // 게시판 파일 업로드
+		MultipartFile uploadFile = vo.getUploadFile();
+		if(!uploadFile.isEmpty()) {
+			String fileName = uploadFile.getOriginalFilename();
+			uploadFile.transferTo(new File("D:/" + fileName));
+		}
+		
 		boardService.insertBoard(vo);
 		return "redirect:/getBoardList.do"; 
 	}
@@ -59,4 +68,8 @@ public class BoardController {
 	      System.out.println(result);
 	      m.addAttribute("board", result);
 	   }
+	   
+
+	   
+	   
 }
