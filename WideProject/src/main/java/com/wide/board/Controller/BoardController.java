@@ -28,6 +28,9 @@ public class BoardController {
 	
 	@RequestMapping("/saveBoard.do")
 	public String saveBoard(BoardDTO vo) throws Exception {
+		 if(vo.getWriter() == null || vo.getWriter().equals("")) { 
+			 throw new IllegalArgumentException("작성자는 반드시 입력하셔야 합니다."); }
+		 
 	    // 게시판 파일 업로드
 		MultipartFile uploadFile = vo.getUploadFile();
 		if(!uploadFile.isEmpty()) {
