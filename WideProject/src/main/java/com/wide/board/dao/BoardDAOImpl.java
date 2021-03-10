@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.wide.board.dto.BoardDTO;
+import com.wide.board.dto.PageDTO;
 
 @Repository("boardDAO")
 public class BoardDAOImpl implements BoardDAO{
@@ -45,5 +46,15 @@ public class BoardDAOImpl implements BoardDAO{
 	public void plusCnt(BoardDTO vo) {
 		System.out.println("===> plusCnt() 호출");
 		mybatis.update("BoardDAO.plusCnt", vo);
+	}
+	
+	@Override
+	public int countBoard(PageDTO vo) {
+		return mybatis.selectOne("BoardDAO.countBoard", vo);
+	}
+
+	@Override
+	public List<BoardDTO> selectBoard(PageDTO vo) {
+		return mybatis.selectList("BoardDAO.selectBoard", vo);
 	}
 }

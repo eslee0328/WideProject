@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.wide.board.dao.BoardDAOImpl;
 import com.wide.board.dto.BoardDTO;
+import com.wide.board.dto.PageDTO;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
@@ -41,6 +42,16 @@ public class BoardServiceImpl implements BoardService {
 	// 글 조회수
 	public void plusCnt(BoardDTO vo) {
 		boardDAO.plusCnt(vo);
+	}
+	
+	@Override
+	public int countBoard() {
+		return boardDAO.countBoard(null);
+	}
+
+	@Override
+	public List<BoardDTO> selectBoard(PageDTO vo) {
+		return boardDAO.selectBoard(vo);
 	}
 
 }

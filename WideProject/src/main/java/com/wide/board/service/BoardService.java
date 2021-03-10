@@ -3,6 +3,7 @@ package com.wide.board.service;
 import java.util.List;
 
 import com.wide.board.dto.BoardDTO;
+import com.wide.board.dto.PageDTO;
 
 public interface BoardService {
 
@@ -23,5 +24,11 @@ public interface BoardService {
 	
 	// 조회수
 	void plusCnt(BoardDTO vo);
+	
+	// 게시물 총 갯수
+	int countBoard();
+
+	// 페이징 처리 게시글 조회
+	List<BoardDTO> selectBoard(PageDTO vo);
 
 }

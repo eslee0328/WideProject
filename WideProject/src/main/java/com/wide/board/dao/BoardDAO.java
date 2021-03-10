@@ -3,6 +3,7 @@ package com.wide.board.dao;
 import java.util.List;
 
 import com.wide.board.dto.BoardDTO;
+import com.wide.board.dto.PageDTO;
 
 public interface BoardDAO {
 
@@ -23,5 +24,11 @@ public interface BoardDAO {
 	
 	// 글 조회수 증가
 	public void plusCnt(BoardDTO vo);
+	
+	// 게시물 총 갯수
+	public int countBoard(PageDTO vo);
+
+	// 페이징 처리 게시글 조회
+	public List<BoardDTO> selectBoard(PageDTO vo);
 	
 }

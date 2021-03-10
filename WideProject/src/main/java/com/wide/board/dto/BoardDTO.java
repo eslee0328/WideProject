@@ -22,7 +22,7 @@ public class BoardDTO {
 	private String content;
 	private Date regdate;
 	private int cnt;
-	private MultipartFile uploadFile;
+	// private MultipartFile uploadFile;
 	
 	public int getSeq() {
 		return seq;
@@ -62,12 +62,10 @@ public class BoardDTO {
 	}
 	
 	
-	public MultipartFile getUploadFile() {
-		return uploadFile;
-	}
-	public void setUploadFile(MultipartFile uploadFile) {
-		this.uploadFile = uploadFile;
-	}
+	/*
+	 * public MultipartFile getUploadFile() { return uploadFile; } public void
+	 * setUploadFile(MultipartFile uploadFile) { this.uploadFile = uploadFile; }
+	 */
 	
 	@Override
 	public String toString() {
