@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>기본에러화면</title>
+<title>에러</title>
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <!-- 타이틀 시작 -->
 <table width="100%" border="1" cellspacing="0" cellpadding="0">
- <tr><td align="center" bgcolor="orange"><b>기본 에러 화면입니다.</b></td></tr>
+ <tr><td align="center" bgcolor="orange"><b>에러 화면입니다.</b></td></tr>
 </table>
 <br>
 <!-- 에러 메시지 -->
@@ -17,7 +17,7 @@
 <tr>
 	<td align="center">
 	<br><br><br><br><br>
-	Message : ${exception.message}
+	빈칸을 채워주세요.
 	<br><br><br><br><br>
 	</td>
 </tr>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>기본에러화면</title>
+<title>에러</title>
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <!-- 타이틀 시작 -->
@@ -17,7 +17,7 @@
 <tr>
 	<td align="center">
 	<br><br><br><br><br>
-	Message : ${exception.message}
+	빈칸을 채워주세요.
 	<br><br><br><br><br>
 	</td>
 </tr>
