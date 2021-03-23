@@ -48,11 +48,11 @@
 		</div> <!-- 옵션선택 끝 -->
 		<table border="1">
 			<tr>
-				<td bgcolor="orange" width="100">번호</td>
-				<td bgcolor="orange" width="200">제목</td>
-				<td bgcolor="orange" width="150">작성자</td>
-				<td bgcolor="orange" width="150">등록일</td>
-				<td bgcolor="orange" width="100">조회수</td>		
+				<td bgcolor="#D3D3D3" width="100">번호</td>
+				<td bgcolor="#D3D3D3" width="200">제목</td>
+				<td bgcolor="#D3D3D3" width="150">작성자</td>
+				<td bgcolor="#D3D3D3" width="150">등록일</td>
+				<td bgcolor="#D3D3D3" width="100">조회수</td>		
 			</tr>
 			<c:forEach items="${viewAll }" var="list">
 				<tr>
@@ -64,7 +64,7 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<input type="button" value="글쓰기" style="float: right;" onclick="location.href='/WideProject/insertBoard.do'"><br>
+		<input type="button" value="글쓰기" style="float: right;" onclick="location.href='/board/insertBoard.do'"><br>
 		
 		<div style="display: block; text-align: center;">		
 			<c:if test="${paging.startPage != 1 }">
